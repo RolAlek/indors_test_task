@@ -19,8 +19,8 @@ class Cat(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=['name', 'owner'],
-                name='unique_name_owner',
+                fields=["name", "owner"],
+                name="unique_name_owner",
             ),
         ]
 

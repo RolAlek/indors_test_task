@@ -1,3 +1,4 @@
+from cats.models import Cat
 from django.http import HttpRequest
 from django.shortcuts import get_object_or_404
 from rest_framework import status
@@ -6,7 +7,6 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from cats.models import Cat
 from .permissions import OwnerOrReadOnly
 from .serializers import CatSerializer, UserRegistrationSerializer
 
