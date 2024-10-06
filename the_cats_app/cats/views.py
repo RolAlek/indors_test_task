@@ -1,15 +1,15 @@
 from django.http import HttpRequest
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from .models import Cat
+from .permissions import OwnerOrReadOnly
 from .serializers import CatSerializer
 
 
 @api_view(["GET", "POST"])
-@permission_classes([IsAuthenticated])
+@permission_classes([OwnerOrReadOnly])
 def cat_list(request: HttpRequest) -> Response:
     if request.method == "POST":
         serializer = CatSerializer(
