@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 djangorestframework = "^3.15.2"
 python-dotenv = "^1.0.1"
+webcolors = "^24.8.0"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^7.1.1"
